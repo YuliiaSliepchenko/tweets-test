@@ -11,18 +11,7 @@ const [page, setPage] = useState(1);
     
   const [userData, setUserData] = useState(localStorage.getItem('tweets') || []);
   console.log(userData)
-  // const [index,setIndex ] = useState(null); 
-  // const [isFollowing, setIsFollowing] = useState(
-  //   localStorage.getItem(`isFollowing_${index}`) === 'true'
-  // );
-  // // const [followersCount, setFollowersCount] = useState(
-  // //   parseInt(localStorage.getItem(`followersCount_${index}`)) || 100500
-  // // );
-
-  // useEffect(() => {
-  //   localStorage.setItem(`isFollowing_${index}`, isFollowing);
-  //   localStorage.setItem(`followersCount_${index}`, followersCount);
-  // }, [isFollowing, followersCount, index]);
+ 
   
   useEffect(() => {
     const fetchUserData = async () => {

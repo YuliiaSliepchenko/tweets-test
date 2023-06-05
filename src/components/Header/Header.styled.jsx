@@ -19,7 +19,7 @@ max-width: 100%;
 export const Conteiner = styled.div`
 @media (min-width: 320px) {
 height: 56px;
-max-width:480px;
+min-width:480px;
 display: flex;
 justify-content: space-between;
 padding-right: 20px;
@@ -27,7 +27,7 @@ margin:auto;
 }
 
 @media (min-width: 768px) {
-    min-width: 768px;
+    min-width:768px;
     padding-right: 20px;
          
   }

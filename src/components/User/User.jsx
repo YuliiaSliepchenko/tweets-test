@@ -3,7 +3,7 @@ import React from 'react';
 import logo from 'images/logo.png';
 import bgrImg from 'images/bgrImg.png';
 import { Card, Logo, BgrImg, Avatar, ListItem, Header, Btn, Item} from './User.styled.jsx';
-import { Link } from 'react-router-dom';
+
 
 
 export const User = ({ cardIndex ,handleClick}) => {
@@ -13,7 +13,7 @@ export const User = ({ cardIndex ,handleClick}) => {
       <Header>
         <Logo src={logo} alt="logo" />
         <BgrImg src={bgrImg} alt="BgrImg" />
-        <Link to="/">Back</Link>
+       
       </Header>
       <ListItem>
         <Avatar src={avatar} alt="user" />

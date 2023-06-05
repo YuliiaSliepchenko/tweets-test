@@ -7,7 +7,7 @@ export const Header = styled.div`
     flex-wrap: wrap;
     flex-direction: column;
     align-items: flex-start;
-   
+    border-bottom: 8px solid #EBD8FF;
     width:100%;
   `
 export const Logo = styled.img`
@@ -19,6 +19,7 @@ export const BgrImg = styled.img`
     margin-top: -20px;
     margin-bottom: 10px;
     margin-right:20px;
+    
 width:308px;
 height:168px;`
 

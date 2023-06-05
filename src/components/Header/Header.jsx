@@ -1,5 +1,6 @@
 import logo from 'images/logo.png';
-import user from 'images/logo.png';
+import user from 'images/user.png';
+import { Link } from 'react-router-dom';
 
 
 import {
@@ -18,7 +19,7 @@ export const Header = () => {
       <HeaderBgr>
         <Conteiner >
                     <Logo src={logo} alt="logo" />
-                    
+                   <Link to="/">Back</Link>  
             <Navigate>
             <Avatar src={user} alt="user" >
               </Avatar>

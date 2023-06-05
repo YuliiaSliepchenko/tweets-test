@@ -9,7 +9,7 @@ export const UserList = () => {
 
 const [page, setPage] = useState(1);
     
-  const [userData, setUserData] = useState(localStorage.getItem('tweets') || []);
+  const [userData, setUserData] = useState(JSON.parse(localStorage.getItem('tweets')) || []);
   console.log(userData)
  
   
@@ -20,7 +20,8 @@ const [page, setPage] = useState(1);
         console.log(response);
          
         // setUserData(prev => ([...prev, ...response]));
-        response.map(el => setUserData(prev => [...prev, { ...el, isFollowing: false }]))
+        const updatedData = response.map(el => ({ ...el, isFollowing: false }));
+        setUserData(prev => [...prev, ...updatedData]);
        
       } catch (error) {
         console.error('Error fetching user data:', error);
@@ -28,7 +29,9 @@ const [page, setPage] = useState(1);
     };
     fetchUserData();
   }, [page]);
-  useEffect(() => localStorage.setItem('tweets',JSON.stringify(userData)), [userData])
+  useEffect(() => {
+    localStorage.setItem('tweets', JSON.stringify(userData));
+  }, [userData]);
 
   const handleClick = async (id) => {
     const index = userData.findIndex(el => el.id === id)

@@ -1,16 +1,19 @@
+import { Home } from "pages/Home/Home";
+import { UserList } from "components/UserList/UserList"; 
+import React from 'react';
+import {  Navigate, Route ,Routes} from 'react-router-dom';
+
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
+ 
+       <Routes>
+      {/* <Switch> */}
+        <Route path="/" element={<Home/>} />
+      <Route path="/tweets" element={<UserList />} />
+      <Route path="*"  element={<Navigate to='/'/>} />
+        {/* <Redirect to="/" /> */}
+       
+        </Routes>
+   
   );
 };

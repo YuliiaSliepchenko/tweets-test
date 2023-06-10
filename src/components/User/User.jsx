@@ -1,7 +1,7 @@
 
 import React from 'react';
-import logo from 'images/logo.png';
-import bgrImg from 'images/bgrImg.png';
+import logo from 'assets/images/logo.png';
+import bgrImg from 'assets/images/bgrImg.png';
 import { Card, Logo, BgrImg, Avatar, ListItem, Header, Btn, Item} from './User.styled.jsx';
 
 
